@@ -1,0 +1,117 @@
+/* Page layout */
+.plant-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2px;
+  font-family: "Segoe UI", sans-serif;
+
+}
+
+
+
+/* Title */
+.title {
+  font-size: 2rem;
+  margin-bottom: 6px;
+  color: #065f46;
+}
+
+body.dark .title {
+  color: #4ade80;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  color: #047857;
+  margin-bottom: 30px;
+}
+
+body.dark .subtitle {
+  color: #86efac;
+}
+
+/* Plant emoji (main focus) */
+.plant-emoji {
+  font-size: 6rem;
+  margin: 20px 0;
+  transition: transform 0.4s ease;
+}
+
+.plant-emoji:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+.water-btn {
+  margin-top: 25px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: #10b981;
+  color: white;
+}
+
+body.dark .water-btn {
+  background: #22c55e;
+  color: #0f172a;
+}
+
+.water-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+body.dark .water-btn:hover {
+  background: #16a34a;
+}
+
+.water-btn:active {
+  transform: scale(0.96);
+}
+
+/* Reward text only (plain, no background box) */
+.reward-box {
+  margin-top: 10px;
+  animation: fadeIn 0.6s ease;
+}
+
+.reward-box h3 {
+  color: #065f46;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+body.dark .reward-box h3 {
+  color: #4ade80;
+}
+
+.reward-box p {
+  font-size: 1rem;
+  color: #064e3b;
+  font-style: italic;
+  margin: 0;
+}
+
+body.dark .reward-box p {
+  color: #d1fae5;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

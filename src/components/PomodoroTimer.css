@@ -1,0 +1,189 @@
+/* ---------- PAGE CENTERING ---------- */
+body {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  min-height: 100vh;          
+  margin: 0;                  
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.center-box {
+  padding: 40px 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode support */
+body.dark .center-box {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------- CONTAINER ---------- */
+.container {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  padding: 0;                 /* remove padding */
+  border-radius: 0;           /* remove rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  transition: none;           /* remove transition for background/shadow */
+  box-shadow: none;           /* remove shadow */
+  background: transparent;    /* transparent background */
+}
+.container h3{
+    padding-top: 50px;
+}
+
+/* ---------- LIGHT THEME ---------- */
+body.light {
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+/* timer colors */
+body.light .timer-ring-bg {
+  stroke: #e5e7eb;
+}
+
+body.light .timer-text {
+  color: #111827;
+}
+
+/* buttons colors */
+body.light .action-btns-container button,
+body.light .mode-buttons button {
+  background: #e0f2fe;
+  color: #000000;
+}
+
+body.light .mode-buttons button:hover {
+  background: #bae6fd;
+}
+
+/* ---------- DARK THEME ---------- */
+body.dark {
+  background: #1e293b;
+  color: #e5e8eb;
+}
+
+body.dark .timer-ring-bg {
+  stroke: #334155;
+}
+
+body.dark .timer-text {
+  color: #f8fafc;
+}
+
+body.dark .action-btns-container button,
+body.dark .mode-buttons button {
+  background: #334155;
+  color: #f8fafc;
+}
+
+body.dark .mode-buttons button:hover {
+  background: #475569;
+}
+
+/* ---------- MODE LABEL ---------- */
+.mode-label {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- TIMER ---------- */
+.timer {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-text {
+  position: absolute;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+.action-btns-container {
+  display: flex;
+  gap: 14px;
+}
+
+.action-btns-container button {
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.action-btns-container button:hover {
+  transform: scale(1.05);
+}
+
+.action-btns-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- MODE BUTTONS ---------- */
+.mode-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.mode-buttons button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* ---------- MESSAGE ---------- */
+.msg {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+.stats {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #dbeafe;
+}
+
+.stats p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .timer {
+    width: 160px;
+    height: 160px;
+  }
+
+  .timer-text {
+    font-size: 28px;
+  }
+}

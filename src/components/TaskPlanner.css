@@ -1,0 +1,242 @@
+body.light .todo-container {
+  background: #ffffff;
+  color: #000;
+}
+
+body.light .todo-list li {
+  background: #f5f6ff;
+}
+
+body.light .todo-list li.done {
+  background: #e0e0e0;
+}
+
+body.light .todo-input input {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark .todo-container {
+  background:  #1e293b;
+  color: #ffffff;
+}
+
+body.dark .todo-container h2 {
+  color: #ffffff;
+}
+
+body.dark .todo-list li {
+  background: #2a2a2a;
+}
+
+body.dark .todo-list li span {
+  color: #ffffff;
+}
+
+body.dark .todo-list li.done {
+  background: #3a3a3a;
+}
+
+body.dark .todo-list li.done span {
+  color: #aaaaaa;
+}
+
+body.dark .todo-input input {
+  background: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark .todo-input input::placeholder {
+  color: #aaaaaa;
+}
+
+/* ===============================
+   TODO PAGE (Scoped only)
+   =============================== */
+
+.todo-page {
+  min-height: 100vh;
+  padding-top: 90px; /* space for fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: transparent;
+}
+
+/* ===============================
+   TODO CONTAINER
+   =============================== */
+
+.todo-container {
+  width: 420px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* ===============================
+   INPUT SECTION
+   =============================== */
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.todo-input input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Add button */
+.todo-input button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #667eea;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.todo-input button:hover {
+  background: #5563d6;
+}
+
+/* ===============================
+   TODO LIST
+   =============================== */
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.todo-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Task text */
+.todo-list li span {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Completed */
+.todo-list li.done span {
+  text-decoration: line-through;
+}
+
+/* ===============================
+   ACTION BUTTONS
+   =============================== */
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: white;
+}
+
+.complete {
+  background: #2ecc71;
+}
+
+.edit {
+  background: #f4a261;
+}
+
+.delete {
+  background: #e63946;
+}
+
+/* ===============================
+   EMPTY TEXT
+   =============================== */
+
+.empty {
+  text-align: center;
+  color: gray;
+  margin-top: 10px;
+}
+
+/* ===============================
+   CONGRATS TEXT
+   =============================== */
+
+.congrats-text {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  z-index: 2000;
+}
+
+/* Dark mode congrats */
+body.dark .congrats-text {
+  background: #1b5e20;
+  color: #c8e6c9;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+   =============================== */
+
+@media (max-width: 480px) {
+  .todo-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input button {
+    width: 100%;
+  }
+
+  .actions button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}

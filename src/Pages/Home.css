@@ -1,0 +1,113 @@
+/* ---------- HOME CONTAINER ---------- */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+
+  /* remove home page box feel */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+/* ---------- MOTIVATIONAL CARD (BOX KEPT) ---------- */
+.motivational-card {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 13px;
+  border-radius: 12px;
+
+  /* box style */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.motivational-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.motivational-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* ---------- SITE CONTENT ---------- */
+.sitecontent {
+  max-width: 750px;
+  margin-top: 30px;
+  padding: 0 5px;
+}
+
+.sitecontent p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- LIGHT THEME ---------- */
+body.light .home {
+  background: #f7f9fc;
+}
+
+body.light .motivational-card {
+  background: #ffffff;
+}
+
+body.light .motivational-card h3 {
+  color: #222;
+}
+
+body.light .motivational-card p,
+body.light .sitecontent p {
+  color: #444;
+}
+
+/* ---------- DARK THEME ---------- */
+body.dark .home {
+  background: #1e293b;
+}
+
+body.dark .motivational-card {
+  background: #9bbaec;
+}
+
+body.dark .motivational-card h3 {
+  color: #f8fafc;
+}
+
+body.dark .motivational-card p,
+body.dark .sitecontent p {
+  color: #e2e8f0;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .motivational-card {
+    padding: 14px;
+  }
+
+  .motivational-card h3 {
+    font-size: 18px;
+  }
+
+  .motivational-card p,
+  .sitecontent p {
+    font-size: 14px;
+  }
+
+  .sitecontent {
+    margin-top: 40px;
+  }
+}

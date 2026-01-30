@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding:0; 
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.app{
+  width: 100vw;
+  background: #90aff7;
+  display: flex;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
